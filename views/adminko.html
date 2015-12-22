@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><?=Config::get('site_name')?></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="/webroot/js/admin.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="site">
+    <nav class="navmenu" role="navigation">
+        <ul class="nav navmenu-nav">
+            <li class="logo"><a href="#"><img src="/img/logo.png" alt=""></a></li>
+            <li><a href="#">О проекте</a></li>
+            <li><a href="#">Принцып работы</a></li>
+            <li <?php if( App::getRouter()->getController() == 'pages' ) {?>class="active"<?php } ?>><a href="/adminko/pages/">Pages</a></li>
+            <li <?php if( App::getRouter()->getController() == 'projects' ) {?>class="active"<?php } ?>><a href="/adminko/projects/">Project</a></li>
+            <li><a href="#">Статискика</a></li>
+            <li><a <?php if( App::getRouter()->getController() == 'contacts' ) ?> href="/admin/contacts/">Обратная связь</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <?=$data['content']?>
+    </div>
+</div>
+</body>
+</html>

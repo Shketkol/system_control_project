@@ -1,0 +1,57 @@
+@import url("reset.css");
+
+body {
+    width: 1300px;
+    margin:0 auto;
+}
+.site{
+    display: flex;
+}
+/*  MENU    */
+
+nav {
+    background-color: #293b5a;
+    width: 250px;
+    height: 1000px;
+}
+.navmenu {
+    display:block;
+
+}
+.navmenu li {
+    font-size: 14pt;
+}
+.navmenu li a {
+   text-decoration: none;
+    color: #080859;
+}
+
+.logo {
+    background-color: #21324f;
+    height: 110px;
+}
+
+hr {
+    color: black;
+
+}
+
+/*    CONTENT      */
+.form {
+    padding-top: 75px;
+    margin: 0 auto;
+    width: 500px;
+}
+.navbar {
+    padding-left: 400px;
+}
+.navbar li {
+    background-color: #3dcb35;
+    margin-left: 30px;
+    font-size: 10pt;
+    border-radius: 10px;
+}
+.container {
+    display: block;
+}
+

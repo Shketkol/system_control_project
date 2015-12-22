@@ -1,0 +1,24 @@
+<h3>Project</h3><br/>
+<table class="table table-striped" style="width: 400px;">
+    <?php foreach($data['projects'] as $project_data) { ?>
+    <tr>
+        <td><b><?=$project_data['name']?></b></td>
+        <td align="right">
+            <a href="/adminko/projects/edit/<?=$project_data['id']?>"><button class="btn btn-sm btn-primary">edit</button></a>
+            <a href="/adminko/projects/delete/<?=$project_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-warning">delete</button></a>
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            <p><?php /* СДЕЛАТЬ ОПИСАНИЕ ПРОЕТКА В МОДЕЛИ  */?></p>
+        </td>
+    </tr>
+    <?php } ?>
+</table>
+
+<br/>
+
+<div>
+    <a href="/adminko/projects/add/"><button class="btn btn-sm btn-success">New Page</button></a>
+</div>
